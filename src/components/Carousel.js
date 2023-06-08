@@ -3,8 +3,8 @@ import { ChevronLeft, ChevronRight } from "react-feather"
 
 export default function Carousel({
   children: slides,
-  autoSlide = false,
-  autoSlideInterval = 3000,
+  autoSlide = true,
+  autoSlideInterval = 5000,
 }) {
   const [curr, setCurr] = useState(0)
 
@@ -29,15 +29,15 @@ export default function Carousel({
       <div className="absolute inset-0 flex items-center justify-between p-4">
         <button
           onClick={prev}
-          className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+          className="p-1 rounded-full shadow bg-white/20 text-gray-800 hover:bg-white"
         >
-          <ChevronLeft size={40} />
+          <ChevronLeft size={20} />
         </button>
         <button
           onClick={next}
-          className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+          className="p-1 rounded-full shadow bg-white/20 text-gray-800 hover:bg-white"
         >
-        <ChevronRight size={40} />
+        <ChevronRight size={20} />
         </button>
       </div>
 
