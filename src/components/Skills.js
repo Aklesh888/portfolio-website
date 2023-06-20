@@ -53,7 +53,7 @@ const Skills = () => {
       >
         <div
           href="#"
-          class=" justify-center flex group text-black transition duration-300 rounded-lg"
+          className=" justify-center flex group text-black transition duration-300 rounded-lg"
         >
           <div className="w-40 rounded-lg bg-blue-400 py-1 my-2 text-3xl">
             Skills
