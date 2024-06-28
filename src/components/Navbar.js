@@ -1,16 +1,22 @@
-import React, { useState } from "react";
-import { Menu, X } from "react-feather";
+import React, { useState } from 'react';
+import { Menu, X } from 'react-feather';
+import { Helmet } from 'react-helmet';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div
+      <Helmet>
+        <title>Your Name - Portfolio</title>
+        <meta name="description" content="Portfolio of Aklesh Dahal, an aspiring web developer." />
+      </Helmet>
+      <nav
         className={`border-b h-16 border-white fixed top-0 xl:left-60 xl:right-60 lg:left-32 lg:right-32 md:left-20 md:right-20 right-2 left-2 bg-transparent
       z-20 flex px-4 pt-6 md:pt-6 text-white justify-between max-w-[100vw] ${
-        open ? "" : "backdrop-blur-md"
-      }`}>
+          open ? '' : 'backdrop-blur-md'
+        }`}
+      >
         <div className="flex flex-col">
           <div className="self-start md:text-3xl text-2xl font-light w-auto pb-3">
             AkleshDahal
@@ -20,7 +26,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
             className={`md:hidden text-4xl fixed cursor-pointer ml-[82vw]  ${
-              open ? "hidden" : "visible"
+              open ? 'hidden' : 'visible'
             }`}
           >
             <Menu size={40}></Menu>
@@ -30,7 +36,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
             className={`md:hidden text-4xl fixed cursor-pointer ml-[82vw] ${
-              open ? "visible" : "hidden"
+              open ? 'visible' : 'hidden'
             }`}
           >
             <X size={40}></X>
@@ -38,7 +44,7 @@ const Navbar = () => {
         </div>
         <div
           className={`h-full w-full flex justify-center items-center ${
-            open ? "mt-none" : "mt-[-1000px]"
+            open ? 'mt-none' : 'mt-[-1000px]'
           } md:mt-[-1000px] transition-all duration-500`}
         >
           <div className="absolute bg-white rounded-lg h-auto py-4 w-[200px] mt-[650px] mr-[50%] space-y-10 font-thin text-black items-center justify-center flex flex-col z-[100]">
@@ -90,7 +96,7 @@ const Navbar = () => {
           </div>
           <div
             className={`md:hidden backdrop-blur-lg h-screen w-screen absolute inset-0 z-[0] ${
-              open ? "visible" : "hidden"
+              open ? 'visible' : 'hidden'
             }`}
             onClick={() => {
               setOpen(!open);
@@ -132,7 +138,7 @@ const Navbar = () => {
             Projects
           </a>
         </div>
-      </div>
+      </nav>
     </>
   );
 };

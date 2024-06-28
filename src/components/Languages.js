@@ -16,7 +16,7 @@ const IndieLang = (props) => {
           alt=""
           className="h-[120px] w-[120px] md:h-[90px] md:w-[90px] transition duration-150 hover:scale-125 hover:font-normal hover:ease-in"
         />
-        <div className=" pt-4">{props.title}</div>
+        <h1 className=" pt-4">{props.title}</h1>
       </div>
     </>
   );
@@ -29,9 +29,9 @@ const Languages = () => {
         href="#"
         className=" justify-center flex group text-black transition duration-300 rounded-lg"
       >
-        <div className="w-40 rounded-lg bg-orange-400 py-1  text-3xl">
+        <h1 className="w-40 rounded-lg bg-orange-400 py-1  text-3xl">
           Languages
-        </div>
+        </h1>
       </div>
       <div className="flex flex-col">
         <div className="flex  justify-center items-center flex-col md:flex-row">
